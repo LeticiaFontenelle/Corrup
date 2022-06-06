@@ -1,11 +1,12 @@
+#Iniciar 
 glimpse(corrupcao)
 
-levels(glimpse(corrupcao$regiao)) #Observando os rÃ³tulos da variÃ¡vel regiao
-table(corrupcao$regiao) #Tabela de frequÃªncias da variÃ¡vel regiao
+levels(glimpse(corrupcao$regiao)) 
+table(corrupcao$regiao) 
 
 summary(corrupcao)
 
-#Estimando modelo,de forma errada
+#Estimando modelo de forma errada
 modelo_corrupcao <- lm(formula = cpi ~ as.numeric(regiao), 
                        data = corrupcao)
 
@@ -29,7 +30,7 @@ corrupcao %>%
                               "2" = "Oceania", 
                               "3" = "Europa", 
                               "4" = "EUA e Canadá", 
-                              "5" = "Ãsia")) +
+                              "5" = "Ásia")) +
   scale_color_manual("Legenda:",
                      values = "#440154FF") +
   geom_text_repel() +
